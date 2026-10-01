@@ -42,7 +42,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 44, 89, 0.85), rgba(15, 44, 89, 0.85)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(15, 44, 89, 0.88), rgba(15, 44, 89, 0.88)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         .nav-link { position: relative; }
@@ -50,88 +50,120 @@
             content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #DAC0A3; transition: width 0.3s ease-in-out;
         }
         .nav-link:hover::after { width: 100%; }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
     </style>
 </head>
-<body class="bg-brand-gray text-gray-800 antialiased overflow-x-hidden">
+<body class="bg-brand-gray text-gray-800 antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-blue">
 
-    <!-- Top Bar -->
-    <div class="hidden md:flex justify-between items-center bg-brand-lightBlue text-white py-2 px-6 lg:px-12 text-sm font-light">
+    <!-- TOP BAR -->
+    <div class="hidden md:flex justify-between items-center bg-brand-lightBlue text-white py-2 px-6 lg:px-12 text-sm font-light border-b border-white/10">
         <div class="flex space-x-6">
             <a href="tel:+3908331860089" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-phone mr-2"></i>+39 0833 186 0089</a>
             <a href="mailto:degihousesrl@gmail.com" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-envelope mr-2"></i>degihousesrl@gmail.com</a>
         </div>
         <div>
-            <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-location-dot mr-2"></i>Casarano (LE) - Zona Industriale</a>
+            <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-location-dot mr-2"></i>Casarano (LE) - Zona Industriale Lotto 10 Tronco A</a>
         </div>
     </div>
 
-    <!-- Main Navigation (Stile Dierre Minimal & High-End) -->
-    <header class="bg-brand-blue shadow-lg sticky top-0 z-50 border-b border-white/10">
+    <!-- MAIN NAVIGATION -->
+    <header class="bg-brand-blue/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center py-2">
-                    <a href="#" class="flex items-center">
-                        <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-14 md:h-16 w-auto object-contain[cite: 1]">
+                    <a href="#home" class="flex items-center">
+                        <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-14 md:h-16 w-auto object-contain">
                     </a>
                 </div>
                 
+                <!-- Desktop Nav -->
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Home</a>
                     <a href="#chi-siamo" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Chi Siamo</a>
                     <a href="#reparti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Reparti</a>
                     <a href="cataloghi.html" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Cataloghi & SKIN</a>
+                    <a href="#contatti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Contatti</a>
                 </nav>
 
-                <div class="hidden md:flex items-center">
-                    <a href="https://wa.me/393283099390" target="_blank" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md flex items-center gap-2 text-sm tracking-wide">
+                <!-- CTA WhatsApp -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/393283099390" target="_blank" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md flex items-center gap-2 text-sm tracking-wide hover:scale-105">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Preventivo WhatsApp
                     </a>
                 </div>
 
+                <!-- Mobile Menu Toggle Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="menu-btn" class="text-white hover:text-brand-gold focus:outline-none p-2 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="md:hidden absolute top-24 left-0 w-full bg-brand-blue shadow-xl transform -translate-y-[150%] z-40 border-t border-white/10">
-            <div class="px-6 pt-4 pb-6 space-y-2">
-                <a href="#home" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/10">Home</a>
-                <a href="#chi-siamo" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/10">Chi Siamo</a>
-                <a href="#reparti" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/10">Reparti</a>
-                <a href="cataloghi.html" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/10">Cataloghi & SKIN</a>
-                <a href="https://wa.me/393283099390" target="_blank" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-medium bg-green-500 text-white shadow">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+        <!-- Mobile Menu Dropdown (Interactive) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-b border-white/10 px-6 py-4 space-y-3 font-medium shadow-2xl">
+            <a href="#home" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Home</a>
+            <a href="#chi-siamo" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Chi Siamo</a>
+            <a href="#reparti" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Reparti</a>
+            <a href="cataloghi.html" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Cataloghi & SKIN</a>
+            <a href="#contatti" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Contatti</a>
+            <div class="pt-2">
+                <a href="https://wa.me/393283099390" target="_blank" class="block text-center bg-green-500 text-white py-3 rounded-xl font-semibold text-sm shadow">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Scrivi su WhatsApp
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section id="home" class="relative hero-bg h-[85vh] min-h-[600px] flex items-center justify-center pt-10">
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-brand-gold font-semibold tracking-wider uppercase text-sm md:text-base mb-4 block drop-shadow-md">Novità 2026: Rivestimenti in Alluminio SKIN Sallustio</span>
+            <span class="inline-block bg-brand-gold/20 text-brand-gold border border-brand-gold/40 font-semibold tracking-wider uppercase text-xs md:text-sm px-4 py-1.5 rounded-full mb-4 shadow-md">
+                Novità 2026: Rivestimenti in Alluminio SKIN Sallustio
+            </span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
-                Benvenuti da <br class="md:hidden" /><span class="text-brand-gold">DIGI HOUSE</span>
+                Benvenuti da <br class="md:hidden"/><span class="text-brand-gold">DIGI HOUSE</span>
             </h1>
             <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-200 font-light mb-10 drop-shadow">
                 Il tuo partner di fiducia per infissi, porte, sistemi avanzati SKIN Sallustio, ferramenta tecnica e materiali edili a Casarano.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="cataloghi.html" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg">
+                <a href="cataloghi.html" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg hover:scale-105">
                     <i class="fa-solid fa-book-open mr-2"></i> Esplora Cataloghi & SKIN
                 </a>
-                <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-bold px-8 py-4 rounded-full transition duration-300">
-                    <i class="fa-solid fa-map-location-dot mr-2"></i> Raggiungi lo Showroom
+                <a href="#contatti" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-bold px-8 py-4 rounded-full transition duration-300 hover:scale-105">
+                    <i class="fa-solid fa-envelope mr-2"></i> Richiedi Informazioni
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Chi Siamo Section -->
+    <!-- STATS / VALUE PROPOSITION BAR (Interactive touch from File 1) -->
+    <section class="bg-white border-b border-gray-200 py-8 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 border-r last:border-none border-gray-100">
+                    <p class="text-3xl font-extrabold text-brand-blue">100%</p>
+                    <p class="text-sm text-gray-500 font-medium mt-1">Eco Riciclabile</p>
+                </div>
+                <div class="p-4 border-r last:border-none border-gray-100">
+                    <p class="text-3xl font-extrabold text-brand-blue">SKIN</p>
+                    <p class="text-sm text-gray-500 font-medium mt-1">Rivestimenti Sallustio</p>
+                </div>
+                <div class="p-4 border-r last:border-none border-gray-100">
+                    <p class="text-3xl font-extrabold text-brand-blue">Pro & B2C</p>
+                    <p class="text-sm text-gray-500 font-medium mt-1">Assortimento Completo</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-extrabold text-brand-blue">Casarano</p>
+                    <p class="text-sm text-gray-500 font-medium mt-1">Showroom in Zona Industriale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHI SIAMO SECTION -->
     <section id="chi-siamo" class="py-20 md:py-32 bg-brand-gray relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -145,6 +177,11 @@
                     <p class="text-gray-600 text-lg leading-relaxed">
                         Selezioniamo brand partner d'eccellenza come Sallustio con la linea SKIN per garantire standard elevatissimi sia ai professionisti che ai privati in cerca di design e comfort acustico superiore.
                     </p>
+                    <div class="pt-2">
+                        <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-lightBlue transition">
+                            <i class="fa-solid fa-map-location-dot text-brand-gold"></i> Visualizza la posizione su Google Maps <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
@@ -177,7 +214,7 @@
         </div>
     </section>
 
-    <!-- Reparti Section -->
+    <!-- REPARTI SECTION -->
     <section id="reparti" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -187,78 +224,219 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-door-open text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Infissi & Serramenti</h3>
-                    <p class="text-gray-600 text-sm">Porte interne di design GD Dorigo, infissi ad alto isolamento termico e acustico, avvolgibili e zanzariere.</p>
+                <!-- Reparto 1 -->
+                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-door-open text-3xl"></i></div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Infissi & Serramenti</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Porte interne di design GD Dorigo, infissi ad alto isolamento termico e acustico, avvolgibili e zanzariere.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <a href="cataloghi.html" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
+                            <span>Scopri cataloghi</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group relative">
+
+                <!-- Reparto 2 -->
+                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group relative flex flex-col justify-between">
                     <div class="absolute top-0 right-0 bg-amber-100 text-amber-800 text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Novità 100% Eco</div>
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-layer-group text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Rivestimenti SKIN Sallustio</h3>
-                    <p class="text-gray-600 text-sm">Sistemi in alluminio riciclabile fonoassorbenti con aggancio meccanico Fast-Clip per interni ed esterni.</p>
+                    <div>
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-layer-group text-3xl"></i></div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Rivestimenti SKIN Sallustio</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Sistemi in alluminio riciclabile fonoassorbenti con aggancio meccanico Fast-Clip per interni ed esterni.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <a href="cataloghi.html" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
+                            <span>Scopri SKIN</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group relative">
-                    <div class="absolute top-0 right-0 bg-red-100 text-red-600 text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">No Elettrico/Idraulico</div>
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-screwdriver-wrench text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Ferramenta</h3>
-                    <p class="text-gray-600 text-sm">Minuterie, viteria e utensili professionali specifici per edilizia, posa e rifiniture.</p>
+
+                <!-- Reparto 3 -->
+                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group relative flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-blue-100 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Ferramenta Tecnica</div>
+                    <div>
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-screwdriver-wrench text-3xl"></i></div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Ferramenta</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Minuterie, viteria e utensili professionali specifici per edilizia, posa e rifiniture (escluso settore elettrico ed idraulico impiantistico).</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <a href="#contatti" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
+                            <span>Chiedi disponibilità</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-trowel-bricks text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Materiali Edili</h3>
-                    <p class="text-gray-600 text-sm">Malte da ripristino, adesivi professionali, intonaci, rasanti per cappotto e cementi certificati.</p>
+
+                <!-- Reparto 4 -->
+                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-trowel-bricks text-3xl"></i></div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Materiali Edili</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Malte da ripristino, adesivi professionali, intonaci, rasanti per cappotto e cementi certificati.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <a href="#contatti" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
+                            <span>Richiedi preventivo</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-paint-roller text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-brand-blue mb-3">Pitture & Finiture</h3>
-                    <p class="text-gray-600 text-sm">Idropitture traspiranti, rivestimenti protettivi al quarzo e membrane impermeabilizzanti.</p>
+
+                <!-- Reparto 5 -->
+                <div class="bg-brand-gray rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 group flex flex-col justify-between md:col-span-2 xl:col-span-1">
+                    <div>
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-paint-roller text-3xl"></i></div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Pitture & Finiture</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Idropitture traspiranti, rivestimenti protettivi al quarzo e membrane impermeabilizzanti.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <a href="#contatti" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
+                            <span>Contattaci</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
+    <!-- FOOTER & INTERACTIVE CONTACT SECTION (Fused with File 1's contact form functionality) -->
+    <section id="contatti" class="bg-gray-900 text-white py-24 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-                <div>
-                    <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-12 w-auto object-contain mb-4[cite: 1]">
-                    <p class="text-sm mt-2 leading-relaxed max-w-xs">P.IVA 05381680759 - REA LE-362877. L'eccellenza in forniture edili, serramenti e rivestimenti a Casarano.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Info & Map Card -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-brand-gold font-semibold text-xs tracking-widest uppercase bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">Contattaci</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 text-white">Vieni a trovarci a Casarano</h2>
+                        <p class="text-gray-400 mt-3 text-base">Il nostro team è a tua disposizione per consulenze su misura, preventivi gratuiti e supporto tecnico specializzato.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-800 border border-gray-700 text-brand-gold flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-200">Showroom & Sede</h4>
+                                <p class="text-gray-400 text-sm">Zona Industriale Lotto 10 Tronco A, 73042 Casarano (LE)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-800 border border-gray-700 text-brand-gold flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-200">Telefono Fisso</h4>
+                                <p class="text-gray-400 text-sm">+39 0833 186 0089</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-800 border border-gray-700 text-green-400 flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-200">WhatsApp</h4>
+                                <p class="text-gray-400 text-sm">+39 328 309 9390</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-800 border border-gray-700 text-brand-gold flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-gray-200">Email</h4>
+                                <p class="text-gray-400 text-sm">degihousesrl@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map Box -->
+                    <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="block rounded-2xl overflow-hidden border border-gray-800 bg-gray-800/50 h-48 relative flex items-center justify-center group hover:border-brand-gold transition">
+                        <div class="absolute inset-0 opacity-30 bg-[radial-gradient(#DAC0A3_1px,transparent_1px)] [background-size:12px_12px]"></div>
+                        <div class="relative z-10 text-center p-4">
+                            <i class="fa-solid fa-map-location-dot text-4xl text-brand-gold mb-2 group-hover:scale-110 transition-transform"></i>
+                            <p class="font-bold text-white text-sm">DIGI HOUSE S.R.L. Showroom</p>
+                            <p class="text-xs text-brand-gold mt-1 underline">Clicca per aprire su Google Maps</p>
+                        </div>
+                    </a>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Navigazione</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
-                        <li><a href="#chi-siamo" class="hover:text-brand-gold transition">Chi Siamo</a></li>
-                        <li><a href="#reparti" class="hover:text-brand-gold transition">Reparti</a></li>
-                        <li><a href="cataloghi.html" class="hover:text-brand-gold transition">Cataloghi & SKIN</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Contatti</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><i class="fa-solid fa-location-dot text-brand-gold w-4"></i> Casarano (LE), Zona Industriale Lotto 10 Tronco A</li>
-                        <li><i class="fa-solid fa-phone text-brand-gold w-4"></i> +39 0833 186 0089</li>
-                        <li><i class="fa-brands fa-whatsapp text-brand-gold w-4"></i> +39 328 309 9390</li>
-                        <li><i class="fa-solid fa-envelope text-brand-gold w-4"></i> degihousesrl@gmail.com</li>
-                    </ul>
+
+                <!-- Interactive Contact Form -->
+                <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Invia un messaggio</h3>
+                    <p class="text-gray-400 text-sm mb-6">Compila il form qui sotto, ti risponderemo nel minor tempo possibile.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Messaggio inviato con successo! DIGI HOUSE ti ricontatterà presto.'); this.reset();" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Nome e Cognome</label>
+                                <input type="text" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-gold transition-colors" placeholder="Mario Rossi">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Telefono</label>
+                                <input type="tel" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-gold transition-colors" placeholder="+39 333 1234567">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email</label>
+                            <input type="email" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-gold transition-colors" placeholder="mario.rossi@email.it">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Interesse principale</label>
+                            <select class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+                                <option>Infissi & Serramenti</option>
+                                <option>Rivestimenti SKIN Sallustio</option>
+                                <option>Ferramenta Tecnica</option>
+                                <option>Materiali Edili</option>
+                                <option>Pitture & Finiture</option>
+                                <option>Altro / Preventivo Generale</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Messaggio</label>
+                            <textarea rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-gold transition-colors" placeholder="Scrivi qui i dettagli della tua richiesta..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldDark text-brand-blue font-extrabold py-4 rounded-xl transition-all shadow-lg hover:shadow-brand-gold/20">
+                            Invia Richiesta
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-center">
-                <p>&copy; 2026 DIGI HOUSE S.R.L. (P.IVA 05381680759) - Tutti i diritti riservati.</p>
+
+            <!-- Copyright / Legal Footer -->
+            <div class="mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-8 w-auto object-contain">
+                    <p>&copy; 2026 DIGI HOUSE S.R.L. (P.IVA 05381680759 - REA LE-362877) - Tutti i diritti riservati.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#home" class="hover:text-brand-gold transition">Torna su</a>
+                    <a href="cataloghi.html" class="hover:text-brand-gold transition">Cataloghi</a>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
+    <!-- INTERACTIVE JAVASCRIPT FOR MOBILE MENU -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
+        const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
-        let isMenuOpen = false;
-        if(btn) {
+
+        if(btn && menu) {
             btn.addEventListener('click', () => {
-                isMenuOpen = !isMenuOpen;
-                menu.classList.toggle('-translate-y-[150%]', !isMenuOpen);
+                menu.classList.toggle('hidden');
+            });
+
+            // Chiudi il menu mobile automaticamente al click su qualsiasi link
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
             });
         }
     </script>
