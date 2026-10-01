@@ -54,45 +54,55 @@
 </head>
 <body class="bg-brand-gray text-gray-800 antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-blue">
 
-    <!-- TOP BAR -->
-    <div class="hidden md:flex justify-between items-center bg-brand-lightBlue text-white py-2 px-6 lg:px-12 text-sm font-light border-b border-white/10">
-        <div class="flex space-x-6">
-            <a href="tel:+3908331860089" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-phone mr-2"></i>+39 0833 186 0089</a>
-            <a href="mailto:degihousesrl@gmail.com" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-envelope mr-2"></i>degihousesrl@gmail.com</a>
-        </div>
-        <div>
-            <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="hover:text-brand-gold transition duration-200"><i class="fa-solid fa-location-dot mr-2"></i>Casarano (LE) - Zona Industriale Lotto 10 Tronco A</a>
-        </div>
-    </div>
-
-    <!-- MAIN NAVIGATION -->
+    <!-- HEADER STRUTTURATO STILE DIERRE -->
     <header class="bg-brand-blue/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
-                <!-- Logo -->
+                
+                <!-- SELETTORE LINGUA & INFO TOP (Stile Dierre Header) -->
+                <div class="hidden lg:flex items-center space-x-6 text-xs text-gray-300 font-light">
+                    <div aria-label="Selettore di lingua" role="navigation" class="relative group">
+                        <ul class="flex items-center space-x-2">
+                            <li>
+                                <a aria-current="page" href="#" hreflang="it" lang="it" class="flex items-center gap-1 text-brand-gold font-medium">
+                                    <span>ITA</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                                </a>
+                                <ul class="absolute top-full left-0 bg-brand-blue border border-white/10 shadow-xl rounded-lg py-2 mt-1 hidden group-hover:block min-w-[80px]">
+                                    <li><a href="#" hreflang="en" lang="en" class="block px-3 py-1 hover:bg-white/10 text-gray-200">ENG</a></li>
+                                    <li><a href="#" hreflang="fr" lang="fr" class="block px-3 py-1 hover:bg-white/10 text-gray-200">FRA</a></li>
+                                    <li><a href="#" hreflang="es" lang="es" class="block px-3 py-1 hover:bg-white/10 text-gray-200">ESP</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="text-white/20">|</span>
+                    <a href="tel:+3908331860089" class="hover:text-brand-gold transition"><i class="fa-solid fa-phone mr-1"></i>+39 0833 186 0089</a>
+                </div>
+
+                <!-- LOGO AZIENDALE -->
                 <div class="flex-shrink-0 flex items-center py-2">
                     <a href="#home" class="flex items-center">
-                        <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-14 md:h-16 w-auto object-contain">
+                        <img src="logo 1.jpg" alt="DIGI HOUSE Logo" class="h-14 md:h-16 w-auto object-contain bg-white rounded p-1">
                     </a>
                 </div>
                 
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Home</a>
-                    <a href="#chi-siamo" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Chi Siamo</a>
-                    <a href="#reparti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Reparti</a>
-                    <a href="cataloghi.html" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Cataloghi & SKIN</a>
-                    <a href="#contatti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-sm tracking-wide uppercase">Contatti</a>
+                <!-- DESKTOP NAV (Menu principale speculare a Dierre) -->
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#home" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-xs tracking-wider uppercase">Home</a>
+                    <a href="#chi-siamo" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-xs tracking-wider uppercase">Chi Siamo</a>
+                    <a href="#reparti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-xs tracking-wider uppercase">Reparti</a>
+                    <a href="cataloghi.html" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-xs tracking-wider uppercase">Cataloghi & SKIN</a>
+                    <a href="#contatti" class="nav-link text-gray-200 hover:text-brand-gold font-medium transition duration-200 text-xs tracking-wider uppercase">Contatti</a>
                 </nav>
 
-                <!-- CTA WhatsApp -->
+                <!-- CTA WHATSAPP RAPIDA -->
                 <div class="hidden md:flex items-center gap-3">
-                    <a href="https://wa.me/393283099390" target="_blank" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md flex items-center gap-2 text-sm tracking-wide hover:scale-105">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Preventivo WhatsApp
+                    <a href="https://wa.me/393283099390" target="_blank" class="bg-brand-gold hover:bg-brand-goldDark text-brand-blue px-5 py-2.5 rounded-full font-semibold transition duration-300 shadow-md flex items-center gap-2 text-xs tracking-wide hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
                     </a>
                 </div>
 
-                <!-- Mobile Menu Toggle Button -->
+                <!-- MOBILE MENU TOGGLE BUTTON -->
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-white hover:text-brand-gold focus:outline-none p-2 text-2xl">
                         <i class="fa-solid fa-bars"></i>
@@ -101,13 +111,13 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown (Interactive) -->
+        <!-- MOBILE MENU DROPDOWN -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-b border-white/10 px-6 py-4 space-y-3 font-medium shadow-2xl">
-            <a href="#home" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Home</a>
-            <a href="#chi-siamo" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Chi Siamo</a>
-            <a href="#reparti" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Reparti</a>
-            <a href="cataloghi.html" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Cataloghi & SKIN</a>
-            <a href="#contatti" class="mobile-link block text-gray-200 hover:text-brand-gold py-2">Contatti</a>
+            <a href="#home" class="block text-gray-200 hover:text-brand-gold py-2">Home</a>
+            <a href="#chi-siamo" class="block text-gray-200 hover:text-brand-gold py-2">Chi Siamo</a>
+            <a href="#reparti" class="block text-gray-200 hover:text-brand-gold py-2">Reparti</a>
+            <a href="cataloghi.html" class="block text-gray-200 hover:text-brand-gold py-2">Cataloghi & SKIN</a>
+            <a href="#contatti" class="block text-gray-200 hover:text-brand-gold py-2">Contatti</a>
             <div class="pt-2">
                 <a href="https://wa.me/393283099390" target="_blank" class="block text-center bg-green-500 text-white py-3 rounded-xl font-semibold text-sm shadow">
                     <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Scrivi su WhatsApp
@@ -120,10 +130,10 @@
     <section id="home" class="relative hero-bg h-[85vh] min-h-[600px] flex items-center justify-center pt-10">
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-block bg-brand-gold/20 text-brand-gold border border-brand-gold/40 font-semibold tracking-wider uppercase text-xs md:text-sm px-4 py-1.5 rounded-full mb-4 shadow-md">
-                Novità 2026: Rivestimenti in Alluminio SKIN Sallustio
+                Novità: Rivestimenti in Alluminio SKIN Sallustio
             </span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight drop-shadow-lg">
-                Benvenuti da <br class="md:hidden"/><span class="text-brand-gold">DIGI HOUSE</span>
+                Soluzioni di chiusura e design <br class="md:hidden"/><span class="text-brand-gold">DIGI HOUSE</span>
             </h1>
             <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-200 font-light mb-10 drop-shadow">
                 Il tuo partner di fiducia per infissi, porte, sistemi avanzati SKIN Sallustio, ferramenta tecnica e materiali edili a Casarano.
@@ -139,7 +149,7 @@
         </div>
     </section>
 
-    <!-- STATS / VALUE PROPOSITION BAR (Interactive touch from File 1) -->
+    <!-- STATS / VALUE PROPOSITION BAR -->
     <section class="bg-white border-b border-gray-200 py-8 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -261,7 +271,7 @@
                     <div>
                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-gold transition"><i class="fa-solid fa-screwdriver-wrench text-3xl"></i></div>
                         <h3 class="text-xl font-bold text-brand-blue mb-3">Ferramenta</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Minuterie, viteria e utensili professionali specifici per edilizia, posa e rifiniture (escluso settore elettrico ed idraulico impiantistico).</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Minuterie, viteria e utensili professionali specifici per edilizia, posa e rifiniture.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200">
                         <a href="#contatti" class="text-xs font-bold text-brand-blue uppercase tracking-wider hover:text-brand-gold transition flex items-center justify-between">
@@ -304,7 +314,7 @@
         </div>
     </section>
 
-    <!-- FOOTER & INTERACTIVE CONTACT SECTION (Fused with File 1's contact form functionality) -->
+    <!-- FOOTER & CONTACT SECTION -->
     <section id="contatti" class="bg-gray-900 text-white py-24 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -355,7 +365,6 @@
                         </div>
                     </div>
 
-                    <!-- Interactive Map Box -->
                     <a href="https://maps.app.goo.gl/UrB33pEyd9nYf3Zw7" target="_blank" class="block rounded-2xl overflow-hidden border border-gray-800 bg-gray-800/50 h-48 relative flex items-center justify-center group hover:border-brand-gold transition">
                         <div class="absolute inset-0 opacity-30 bg-[radial-gradient(#DAC0A3_1px,transparent_1px)] [background-size:12px_12px]"></div>
                         <div class="relative z-10 text-center p-4">
@@ -432,7 +441,6 @@
                 menu.classList.toggle('hidden');
             });
 
-            // Chiudi il menu mobile automaticamente al click su qualsiasi link
             menu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     menu.classList.add('hidden');
